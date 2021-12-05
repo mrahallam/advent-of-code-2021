@@ -31,11 +31,11 @@ for line in horizontal_or_vertical:
             for i in range(line[0][0],line[1][0] + 1):
                 points_covered.append([i,line[0][1]])
 
-new_list = []
+string_coordinates = []
 for i in points_covered:
-    new_list.append(str(i[0])+', '+str(i[1]))
+    string_coordinates.append(str(i[0])+', '+str(i[1]))
 
 from collections import Counter
-cat = Counter(new_list)
-dog = Counter({k: c for k, c in cat.items() if c > 1})
-print(len(dog))
+count_coordinates = Counter(string_coordinates)
+filter_count_coordinates = Counter({k: c for k, c in count_coordinates.items() if c > 1})
+print(len(filter_count_coordinates))
