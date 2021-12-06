@@ -1,17 +1,16 @@
-import re
-
-start_fish = []
 total_fish = 0
 
 input22 = open('input6.txt', 'r')
 for line in input22:
-    start_fish = line.strip().split(',') + start_fish
-
-for i,v in enumerate(start_fish):
-    start_fish[i] = int(v)
+    start_fish = [int(x) for x in line.split(',')]
 
 from collections import Counter
 count = Counter(start_fish)
+
+count[0] = 0
+count[6] = 0
+count[7] = 0
+count[8] = 0
 
 for i in range(256):
     state = []
