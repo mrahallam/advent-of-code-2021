@@ -8,13 +8,11 @@ from collections import Counter
 count = Counter(start_fish)
 
 for i in range(256):
-    state = []
-    for i in range(9):
-        state.append(count.get(i,0))
+    age0 = count.get(0,0)
     for i in range(9):
         count[i] = count[i+1]
-    count[6] = count[6]+state[0]
-    count[8] = state[0]
+    count[6] = count[6]+age0
+    count[8] = age0
 
 for key, value in sorted(count.items(), key=lambda x: x[0]):
     total_fish += value
