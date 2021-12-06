@@ -1,10 +1,6 @@
-import re
-
-start_fish = []
-
 input22 = open('input6.txt', 'r')
 for line in input22:
-    start_fish = line.strip().split(',') + start_fish
+    start_fish = [int(x) for x in line.split(',')]
 
 for i,v in enumerate(start_fish):
     start_fish[i] = int(v)
