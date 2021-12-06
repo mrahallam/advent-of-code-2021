@@ -13,11 +13,6 @@ for i,v in enumerate(start_fish):
 from collections import Counter
 count = Counter(start_fish)
 
-count[0] = 0
-count[6] = 0
-count[7] = 0
-count[8] = 0
-
 for i in range(256):
     state = []
     for i in range(9):
