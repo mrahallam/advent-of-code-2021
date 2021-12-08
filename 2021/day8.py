@@ -25,8 +25,6 @@ for k, v in numbers.items():
     print(k,'-->', v)
     part_1 += v
 
-print(f'Part 1: {part_1}')
-
 part_2 = 0
 for i in lines:
     numbers_letters = {1:[], 4:[], 7:[], 8:[]}
@@ -45,11 +43,15 @@ for i in lines:
     # 0,6,9 using 4, 1
     for j in i[0]:
         if(len(j)) == 6:
+            # of those length 6, removing 9 from 4 leaves 0
             if len(numbers_letters[4]-set(j)) == 0:
                 numbers_letters[9] = set(j)
+            # 0, 6 left. 
             else:
+                # remove 0 from 1, leaves 0
                 if len(numbers_letters[1] - set(j)) == 0:
                     numbers_letters[0] = set(j)
+                # leaves 6 as the only remaining option
                 else:
                     numbers_letters[6] = set(j)
 
@@ -59,12 +61,16 @@ for i in lines:
             # of those length 5, 3 overlaps completely with 1
             if len(numbers_letters[1]-set(j)) == 0:
                 numbers_letters[3] = set(j)
+            # 2,5 left
             else:
+                # removing 5 from 4 leaves only 1
                 if len(numbers_letters[4] - set(j)) == 1:
                     numbers_letters[5] = set(j)
+                # removing 2 from 4 leaves 2
                 else:
                     numbers_letters[2] = set(j)
 
+    numbers_letters = dict(sorted(numbers_letters.items(), key=lambda x: x[0]))
     for k, v in numbers_letters.items():
         print(k,'-->',v)
 
@@ -78,4 +84,5 @@ for i in lines:
 
     part_2 += int(output_number)
 
-print(part_2)
+print(f'Part 1: {part_1}')
+print(f'Part 2: {part_2}')
