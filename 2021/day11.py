@@ -62,7 +62,7 @@ def increase_surrounding_one(array,x,y):
         array[y][x+1] += 1
         if array[y][x+1] > 9 and not flashed[y][x+1]:
             flash(array)
-    #bottom rightß
+    #bottom right
     if x < width - 1 and y < height - 1:
         array[y+1][x+1] += 1
         if array[y+1][x+1] > 9 and not flashed[y+1][x+1]:
