@@ -1,5 +1,5 @@
 from collections import defaultdict
-from copy import deepcopy
+
 #file_name = 'test12.txt'
 file_name = 'input12.txt'
 #file_name = 'test12_larger.txt'
