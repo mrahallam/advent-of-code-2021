@@ -4,8 +4,8 @@ player_1 = []
 player_2 = []
 counter = 1
 
-input22 = open('input22_2020.txt', 'r')
-#input22 = open('test22_2020.txt', 'r')
+input22 = open('input22.txt', 'r')
+#input22 = open('test22.txt', 'r')
 for line in input22:
     if re.match(r'^Player 1',line):
         counter = 1
