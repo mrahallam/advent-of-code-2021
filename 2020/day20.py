@@ -2,7 +2,7 @@ import numpy as np
 import re
 
 #data = 'test7.txt'
-data = 'input20_2020.txt'
+data = 'input20.txt'
 
 with open(data) as file:
     for line in file:
