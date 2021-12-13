@@ -1,5 +1,4 @@
 import re
-import copy
 
 player_1 = []
 player_2 = []
@@ -31,7 +30,7 @@ def play_game(deck1,deck2,get_winner = False):
         deck_to_check = ",".join(str(x) for x in deck1)+",".join(str(x) for x in deck2)
         if deck_to_check in decks_this_game:
             winner = 1
-            print('recursive escape!')
+            #print('recursive escape!')
             break
         decks_this_game.add(deck_to_check)
         #print(f'{"".join(str(x) for x in deck1)}, {"".join(str(x) for x in deck2)}, {get_winner}')
@@ -73,4 +72,4 @@ def get_score(deck):
         multiplier += 1
     return score
 
-print(play_game(copy.deepcopy(player_1),copy.deepcopy(player_2)))
+print(play_game(player_1,player_2))
