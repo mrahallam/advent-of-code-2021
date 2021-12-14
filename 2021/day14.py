@@ -1,4 +1,3 @@
-
 #file_name = 'test/test14.txt'
 file_name = 'input/input14.txt'
 from collections import Counter
