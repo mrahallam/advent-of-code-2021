@@ -10,7 +10,6 @@ with open(file_name, 'r') as file:
     insertion_rules = dict(rule.split(" -> ") for rule in list_of_rules.split("\n"))
 
 pairs = {}
-
 counts = {}
 
 def insert_polymers(template,i):
