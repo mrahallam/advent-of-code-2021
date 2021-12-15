@@ -16,9 +16,6 @@ risk = 0
 #top n basins
 n = 3
 
-def get_risk(height):
-    return height + 1
-
 def get_left(x,y):
     if x > 0:
         return([(x-1,y),lines[y][x-1]])
