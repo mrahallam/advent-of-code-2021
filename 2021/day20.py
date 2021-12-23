@@ -2,6 +2,7 @@ file_name = 'input20.txt'
 #file_name = 'test20.txt'
 image = []
 infinite_space = '0'
+n = 50 #how many loops
 from copy import deepcopy
 
 with open(file_name) as f:
@@ -61,7 +62,6 @@ def enhance_image(array):
         for j, w in enumerate(v):
             binary_number = get_binary(before_enhancement,i,j)
             loc = int(binary_number,2)
-            #print(i,j,binary_number,image_enhancement_algorithm[loc])
             array[i][j] = (image_enhancement_algorithm[loc])
 
     infinite_space_string = ''
@@ -71,11 +71,14 @@ def enhance_image(array):
     
     return array
 
-for i in range(50):
+for i in range(n):
     if i == 0:
         result = enhance_image(image)
     else:
         result = enhance_image(result)
+# print each iteration if you want!
+#    for i in result:
+#        print(''.join(i))
 
 pixel_count = 0
 for i in result:
