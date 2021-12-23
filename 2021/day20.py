@@ -48,10 +48,8 @@ def get_binary(array,y,x):
         for j in range(-1,2,1):
             if y >= 0 and x >= 0 and y < len(array)-1 and x < len(array[0])-1:
                 binary += array[i+y][j+x]
-                #print(binary)
             else:
                 binary += infinite_space
-                #print(binary)
     return binary
 
 def enhance_image(array):
